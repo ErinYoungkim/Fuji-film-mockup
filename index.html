@@ -11,10 +11,10 @@
 </head>
 <body>
     <div class="container">
-        <div class="background"></div>
         <header class="header">
             <h1 class="title">FUJIFILM</h1>
                 <div class="stacking-container">
+                    <!-- come back to nav need to hit the board again -->
                     <nav class="navigation">
                         <ul>
                             <li><a href="#">Home</a></li>
@@ -29,16 +29,25 @@
                 </div>
         </header>
         <div class="product-section">
-            <img src="./assets/whiteimages/pexels-madebymath-90946.jpg" alt="fuji film camera"  class="product-image">
+            <img src="./assets/whiteimages/fujixt10.png" alt="fuji film camera"  class="product-image">
         </div>
-        <div class="slider">
+
+        <!-- <div class="background">
+            <img src="./assets/whiteimages/pexels-codioful-7130475.jpg" alt="background" class="product-background">                        
+        </div> -->
+
+        <div class="slider" style="
+            --width: 100px;
+            --height: 50px;
+            --quantity: 6;
+        ">
             <ul class="list">
-                <li>X-SERIES</li>
-                <li>X-T2</li>
-                <li>X-T4</li>
-                <li>X-T10</li>
-                <li>X-100</li>
-                <li>X-PRO1</li>
+                <li class="item" style="--position: 1">X-SERIES</li>
+                <li class="item" style="--position: 2">X-T2</li>
+                <li class="item" style="--position: 3">X-T4</li>
+                <li class="item" style="--position: 4">X-T10</li>
+                <li class="item" style="--position: 5">X-100</li>
+                <li class="item" style="--position: 6">X-PRO1</li>
             </ul>
         </div>
     </div>

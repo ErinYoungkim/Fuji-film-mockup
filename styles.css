@@ -10,8 +10,6 @@ body {
     width: 100vw;
     height: 100vh;
     position: relative;
-    /* background-color: #f5f5f5; */
-    /* overflow: hidden; */
   }
 
 .header {
@@ -94,17 +92,58 @@ body {
     justify-content: center;
     height: 75vh;
     width: 100%;
-    margin-top: -26rem;
+    margin-top: -27rem;
   }
 .product-image {
     /* border: 2px solid blue; */
+    position: relative;
     height: 75vh;
     width: 100vh;
     margin-right: 16rem;
     z-index: 1;
   }
+  /* .product-background {
+    background: url(./assets/whiteimages/pexels-2148569065-30249928.jpg);
+    z-index: -1;
+    height: 50vh;
+    width: 100vw;
+    margin-top: -100rem;
+  } */
 
-
+.slider {
+  border: red 2px solid;
+  width: 100%;
+  height: var(--height);
+  overflow: hidden;
+  mask-image: linear-gradient(to right, transparent, #000 20% 80%, transparent);
+  pointer-events: visible;
+  margin-top: -8rem;
+}
+.slider .list {
+  display: flex;
+  list-style: none;
+  width: 100%;
+  min-width: calc(var(--width) * var(--quantity));
+  position: relative;
+}
+.slider .list .item {
+  width: var(--width);
+  height: var(--height);
+  position: absolute;
+  left: 100%;
+  animation: autoRun 10s linear infinite;
+  animation-delay: calc((10s / var(--quantity)) * (var(--position) - 1));
+}
+@keyframes autoRun {
+  from{
+    left: 100%;
+  }to{
+    left: calc(var(--width) * -1);
+  }
+}
+/* .slider:hover .item {
+  animation-play-state: paused!important;
+} */
 
 
 
